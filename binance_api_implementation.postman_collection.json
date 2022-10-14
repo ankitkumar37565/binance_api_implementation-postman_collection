@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "50180065-d57d-4b45-be71-1a33a3593ce1",
+		"name": "binance_api_implementation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22805821"
+	},
+	"item": [
+		{
+			"name": "user_apis",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account_apis",
+			"item": [
+				{
+					"name": "/accountInformation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accountInformation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accountInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/currentPositonMode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getPositonMode",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getPositonMode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePositionMode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dualSidePosition\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/changePositionMode",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"changePositionMode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeInitialLeverage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"leverage\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/changeInitialLeverage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"changeInitialLeverage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeMarginType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"marginType\":\"ISOLATED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/changeMarginType",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"changeMarginType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "openPosition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/openPosition",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"openPosition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tradeHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tradeHistory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tradeHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountBalanceDb",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/getAccountBalanceDb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getAccountBalanceDb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFxAccountBalanceDb",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/getFxAccountBalanceDb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getFxAccountBalanceDb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trade_apis",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"side\":\"BUY\",\r\n    \"type\":\"MARKET\",\r\n    \"quantity\":0.001\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/createOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"orderId\":3233831987\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/queryOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"queryOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"orderId\":3237656484\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cancelOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cancelOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelAllOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cancelAllOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cancelAllOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currentOpenOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"orderId\":3233835178\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/currentOpenOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"currentOpenOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currentAllOpenOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/currentAllOpenOrders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"currentAllOpenOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/allOrder",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"allOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifyIsolatedPositionMargin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\",\r\n    \"amount\":1,\r\n    \"type\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/modifyIsolatedPositionMargin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"modifyIsolatedPositionMargin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currentPositionInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/currentPositionInformation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"currentPositionInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accountTradeList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":\"BTCUSDT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accountTradeList",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accountTradeList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_stream_api",
+			"item": [
+				{
+					"name": "postListenKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/postListenKey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postListenKey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putListenKey",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/putListenKdy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"putListenKdy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteListenKey",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deleteListenKey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deleteListenKey"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
